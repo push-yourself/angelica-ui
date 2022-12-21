@@ -7,8 +7,10 @@ import {
     Cascader as ElCascader,
     TableColumn,
 } from 'element-ui';
+import RegisterComponent from '@/components/register-component/index.vue';
 
 declare global {
+    // table column 属性的类型
     interface HTableColumn extends Partial<TableColumn> {
         render?(h: CreateElement, data: RenderOption): VNode | JSX.Element;
     }

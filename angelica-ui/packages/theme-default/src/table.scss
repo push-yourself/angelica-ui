@@ -1,0 +1,275 @@
+.dark-theme {
+    &.el-link,
+    .el-link {
+        &--default {
+            color: #0087ff;
+        }
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+}
+
+.dark-theme {
+    .el-tabs__nav-wrap {
+        &::after {
+            background-color: #184b78;
+        }
+    }
+    .el-tabs__active-bar {
+        background-color: #00d9ff;
+    }
+    .el-tabs__item {
+        color: #a4ceed;
+        font-size: 16px;
+        font-family: SourceHanSansCN-Regular, SourceHanSansCN;
+        font-weight: 400;
+        &.is-active {
+            color: #00d9ff;
+        }
+    }
+}
+
+// 弹窗
+.dark-theme {
+    &.el-dialog,
+    .el-dialog {
+        padding: 12px;
+        background-image: url('./images/dialog-bg.png') !important;
+        background-size: 100% 100% !important;
+        background-color: transparent !important;
+
+        &__header {
+            text-align: center;
+            background-image: url('./images/dialog-title-bg.png');
+            background-size: 100% 100%;
+            .el-dialog__title {
+                color: #ffffff;
+                font-size: 22px;
+                font-family: SourceHanSansCN-Medium, SourceHanSansCN;
+                font-weight: 500;
+            }
+        }
+        &__close {
+            &::before {
+                display: none;
+            }
+            width: 37px;
+            height: 37px;
+            margin-right: 4px;
+            margin-top: 8px;
+            background-image: url('./images/dialog-close.png');
+            background-size: 100% 100%;
+        }
+        &__body {
+            padding: 0;
+        }
+    }
+}
+
+.dark-theme {
+    /* Mr.xiao
+    -------------------------------------------*/
+
+    // 表单
+    .el-form,
+    &.el-form {
+        &-item {
+            &__label {
+                color: inherit;
+            }
+        }
+    }
+
+    // // 文本框
+    // &.el-input__inner,
+    // .el-input__inner,
+    // &.is-disabled .el-input__inner,
+    // .is-disabled .el-input__inner,
+    // // 文本框前置或后置元素
+    // &.el-input-group__append,
+    // .el-input-group__append,
+    // &.el-input-group__prepend,
+    // .el-input-group__prepend {
+    //     border-width: 2px;
+    //     border-color: $--border-color-dark;
+    //     // background-color: $--background-color-dark;
+    //     background-color: $--bg-input-color;
+    //     color: $--color-active;
+    //     height: 40px;
+    // }
+
+    // // 文本域
+    // &.el-textarea__inner,
+    // .el-textarea__inner {
+    //     border: $--base-border-dark;
+    //     // background-color: $--background-color-dark;
+    //     background-color: initial;
+    //     color: $--color-active;
+    // }
+
+    // 文本域统计
+    &.el-textarea,
+    .el-textarea {
+        .el-input__count {
+            color: inherit;
+            background-color: initial;
+            line-height: initial;
+        }
+    }
+
+    // 时间选择器
+    .el-date-editor {
+        .el-range-input {
+            background: transparent;
+            color: #719cbc;
+            // color: $--color-active;
+        }
+    }
+
+    // 单选框
+    .el-radio {
+        color: white;
+    }
+
+    // 树组件
+    &.el-tree,
+    .el-tree {
+        color: inherit;
+        background-color: initial;
+
+        &__empty-text {
+            color: inherit;
+        }
+
+        .el-tree-node {
+            &:focus {
+                & > .el-tree-node__content {
+                    background-color: initial;
+                }
+            }
+
+            // 展开图标
+            &__expand-icon {
+                &:not(.is-leaf) {
+                    color: inherit;
+                }
+            }
+
+            &__content {
+                // 节点内容
+                &:hover {
+                    background-color: initial;
+                }
+            }
+
+            &__children {
+                // 节点子级
+                overflow: initial;
+            }
+        }
+
+        &--highlight-current {
+            .el-tree-node.is-current {
+                & > .el-tree-node__content {
+                    color: $--color-dark-active;
+                    background-color: $--bg-color-dark-lucency;
+                }
+            }
+        }
+    }
+
+    // 多选框
+    &.el-checkbox,
+    .el-checkbox {
+        color: $--color;
+
+        &__input.is-focus .el-checkbox__inner {
+            border-color: white;
+        }
+
+        &__inner {
+            &:hover {
+                border-color: white;
+            }
+
+            background-color: initial;
+        }
+    }
+
+    // 选项卡
+    &.el-tabs,
+    .el-tabs {
+        &__nav-wrap::after {
+            background-color: rgba(61, 174, 255, 0.5);
+        }
+
+        &__active-bar {
+            display: none;
+        }
+
+        &__item {
+            background: linear-gradient(0deg, rgba(1, 96, 151, 0.3) 0%, rgba(0, 167, 247, 0.3) 100%);
+            color: #2197d3;
+            // font-family: PangMenZhengDao;
+            font-weight: 400;
+            padding: 0 20px !important;
+
+            &.is-active {
+                color: #c7e1f9;
+                background: linear-gradient(0deg, #016097 0%, #00a7f7 100%);
+            }
+        }
+    }
+
+    // Popover 弹出框
+    &.el-popover.el-popover,
+    .el-popover.el-popover {
+        background-color: #061b35;
+        border: 1px solid #1d7cb5;
+        color: inherit;
+
+        &.el-popper[data-popper-placement^='bottom'] {
+            .el-popper__arrow {
+                &::before {
+                    border-bottom-color: transparent;
+                    border-right-color: transparent;
+                }
+            }
+        }
+
+        &.el-popper[data-popper-placement^='top'] {
+            .el-popper__arrow {
+                &::before {
+                    border-top-color: transparent;
+                    border-left-color: transparent;
+                }
+            }
+        }
+
+        &.el-popper[data-popper-placement^='right'] {
+            .el-popper__arrow {
+                &::before {
+                    border-right-color: transparent;
+                    border-top-color: transparent;
+                }
+            }
+        }
+
+        &.el-popper[data-popper-placement^='left'] {
+            .el-popper__arrow {
+                &::before {
+                    border-left-color: transparent;
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+
+        .el-popper__arrow {
+            &::before {
+                background-color: #061b35;
+                border-color: #1d7cb5;
+            }
+        }
+    }
+}
